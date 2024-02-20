@@ -7,7 +7,7 @@ Note: The `xhost +` command is in the documentation for convienience. It is a se
 
 ## Using Docker
 
-I based this dockerfile in [source](https://github.com/bannsec/autopsy_docker/)
+I based this dockerfile in [source](https://github.com/bannsec/autopsy_docker/). I decide to generate my own container because I want to run the last version of the Autopsy (4.21.0).
 
 ```
 $ xhost +
