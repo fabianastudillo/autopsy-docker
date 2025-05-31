@@ -2,7 +2,6 @@ services:
     autopsy:
         build:
           context: .
-#        image: bannsec/autopsy:latest
         image: autopsy
         container_name: autopsy
         shm_size: "2gb"

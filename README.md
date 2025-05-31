@@ -1,6 +1,6 @@
 # Autopsy
 
-Dockerfile for building the version 4.21.0 of Autopsy for Linux.
+Dockerfile for building the version 4.22.1 of Autopsy for Linux.
 
 ## Run
 Note: The `xhost +` command is in the documentation for convienience. It is a security risk (https://laurentschneider.com/wordpress/2007/03/xhost-is-a-huge-security-hole.html). If you have concerns about your X security, please using xauth instead.
