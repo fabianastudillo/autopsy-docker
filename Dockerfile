@@ -1,4 +1,4 @@
-FROM ubuntu:jammy
+FROM ubuntu:noble
 
 ARG DEBIAN_FRONTEND=noninteractive
 
@@ -43,7 +43,7 @@ RUN apt install -y apt-utils \
 RUN RELEASE=`curl -sI https://github.com/sleuthkit/autopsy/releases/latest \ 
     | awk -F '/' '/^location/ {print  substr($NF, 1, length($NF)-1)}'` \
     && echo ${RELEASE} \ 
-    && RELEASE_PATH="sleuthkit/autopsy/releases/download/${RELEASE}/${RELEASE}.zip" \
+    && RELEASE_PATH="sleuthkit/autopsy/releases/download/${RELEASE}/${RELEASE}_v2.zip" \
     && mkdir -p /opt \
     && cd /opt \
     && curl -L https://github.com/${RELEASE_PATH} > autopsy.zip \
