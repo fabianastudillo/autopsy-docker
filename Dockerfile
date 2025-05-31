@@ -2,8 +2,8 @@ FROM ubuntu:noble
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-ENV JAVA_HOME /usr/lib/jvm/java-1.17.0-openjdk-amd64
-ENV PATH /opt/autopsy/bin:${JAVA_HOME}/bin:$PATH
+ENV JAVA_HOME=/usr/lib/jvm/java-1.17.0-openjdk-amd64
+ENV PATH=/opt/autopsy/bin:${JAVA_HOME}/bin:$PATH
 
 RUN apt -y update && apt -y upgrade
 
@@ -54,7 +54,7 @@ RUN cd /opt/autopsy/linux_macos_install_scripts \
     && sed -i  's/sudo //' install_prereqs_ubuntu.sh \
     && bash install_prereqs_ubuntu.sh
 
-ENV TSK_JAVA_LIB_PATH /usr/share/java
+ENV TSK_JAVA_LIB_PATH=/usr/share/java
 
 RUN RELEASE=`curl -sI https://github.com/sleuthkit/sleuthkit/releases/latest \
     |awk -F '/' '/^location/ {print  substr($NF, 1, length($NF)-1)}'` \

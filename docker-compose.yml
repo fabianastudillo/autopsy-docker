@@ -1,8 +1,10 @@
 services:
     autopsy:
-        build:
-          context: .
-        image: autopsy
+# if you want to build the image uncomment the next
+#        build:
+#         context: .
+#        image: autopsy
+        image: fabianastudillo/autopsy:latest
         container_name: autopsy
         shm_size: "2gb"
         volumes:
